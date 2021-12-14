@@ -1,0 +1,55 @@
+#logging:
+#  pattern:
+#    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%-5p}) %clr(${PID}){faint} %clr(---){faint}
+#    %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n'
+
+#%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}
+#  level:
+#    org.springframework.security: debug
+
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoint:
+
+logging:
+  level:
+#    cn:
+#      cappuccino: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+  pattern:
+    console: '%clr(%d{E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint}
+              %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n'
+
+
+
+#server:
+#  error:
+#    whitelabel:
+#      enabled: true
+#  port: 8080
+#
+#spring:
+#  messages:
+#    basename: messages
+#    encoding: UTF-8
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+  server:
+    port: 8081
+
+
+spring:
+  application:
+    name: c-security
